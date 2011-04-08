@@ -1,0 +1,20 @@
+<% title "Page" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @page.name %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @page.page_type %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @page.content %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %> |
+  <%= link_to "View All", pages_path %>
+</p>
+
