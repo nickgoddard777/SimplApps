@@ -11,7 +11,7 @@
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
-  <body>
+  <body <%= yield :body_tag %> >
     <div id="container">
       <%= render :partial => "layouts/header" %>
       <section id="content">
@@ -19,8 +19,10 @@
           <% flash.each do |name, msg| %>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <% end %>
-          <%= content_tag :h3, yield(:title) if show_title? %>
-          <%= yield %>
+          <article>
+            <%= content_tag :h3, yield(:title) if show_title? %>
+            <%= yield %>
+          </article>
 				</div>
 			</section>
 			<%= render :partial => "layouts/footer" %>
