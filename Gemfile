@@ -4,7 +4,7 @@ gem 'rails', '3.0.5'
 gem 'autotest'
 gem 'will_paginate', '3.0.pre2'
 gem 'heroku'
-
+gem 'devise'
 
 group :development do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
