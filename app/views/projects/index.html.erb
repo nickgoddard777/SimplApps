@@ -1,0 +1,29 @@
+<article>
+
+<% title "Projects" %>
+
+<table>
+  <tr>
+    <th><p>Project</p></th>
+    <th><p>Type</p></th>
+    <th><p>Client</p></th>
+    <th>&nbsp</th>
+    <th>&nbsp</th>
+    <th>&nbsp</th>
+  </tr>
+  <% @projects.each do |project| -%>
+    <tr>
+      <td><p><%= project.name %></p></td>
+      <td><p><%= project.project_type %></p></td>
+      <td><p><%= project.client %></p></td>
+      <td><p><%= link_to 'Show', project, :id => 'show' %></p></td>
+      <td><p><%= link_to 'Edit', edit_project_path(project) %></p></td>
+      <td><p><%= link_to 'Delete', project, :method => :delete  %></p></td>
+     </tr>
+  <% end -%>
+</table>
+
+<%= link_to 'New project', new_project_path %>
+
+</article>
+

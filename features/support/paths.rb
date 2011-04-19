@@ -14,6 +14,9 @@ module NavigationHelpers
     when /the list of pages/
       pages_path
 
+    when /the list of projects/
+      projects_path
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
