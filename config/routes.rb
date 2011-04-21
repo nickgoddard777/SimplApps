@@ -1,6 +1,9 @@
 Simplapps::Application.routes.draw do
 
   match 'projects/portfolio' => 'projects#portfolio'
+  match 'about' 			=> 'pages#about'
+	match 'contact'			=> 'pages#contact'
+	match 'services'			=> 'pages#services'
 
   resources :pages
   resources :projects
@@ -54,7 +57,7 @@ Simplapps::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "pages#index"
+   root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

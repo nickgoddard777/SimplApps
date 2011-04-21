@@ -1,17 +1,16 @@
+
+
 <% title "Pages" %>
-<article>
 
 <table>
   <tr>
     <th><p>Name</p></th>
     <th><p>Type</p></th>
-    <th><p>Content</p></th>
   </tr>
   <% for page in @pages %>
     <tr>
       <td><p><%= page.name %></p></td>
       <td><p><%= page.page_type %></p></td>
-      <td><p><%= page.content %></p></td>
       <td><p><%= link_to "Show", page %></p></td>
       <td><p><%= link_to "Edit", edit_page_path(page) %></p></td>
       <td><p><%= link_to "Delete", page_path(page), :method => :delete %></p></td>
@@ -20,6 +19,4 @@
 </table>
 
 <p><%= link_to "New Page", new_page_path %></p>
-
-</article>
 

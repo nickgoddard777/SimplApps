@@ -1,0 +1,24 @@
+  <% content_for :body_tag do %>
+    id="home"
+  <% end %>
+
+  <% title @page.name %>
+
+  <p>
+    <%= raw(@page.content) %>
+  </p>
+</article>
+<article>
+  <h3><%= @project.name %></h3>
+
+  <p>
+    <%= raw(@project.content) %>
+  </p>
+</article>
+<article>
+  <h3><%= @blog.name %></h3>
+
+  <p>
+    <%= raw(@blog.content) %>
+  </p>
+
