@@ -40,5 +40,9 @@ class ProjectsController < ApplicationController
     redirect_to projects_path, :notice => "Successfully deleted project."
   end
 
+  def portfolio
+    @projects = Project.all
+  end
+
 end
 

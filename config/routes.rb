@@ -1,5 +1,7 @@
 Simplapps::Application.routes.draw do
 
+  match 'projects/portfolio' => 'projects#portfolio'
+
   resources :pages
   resources :projects
 
