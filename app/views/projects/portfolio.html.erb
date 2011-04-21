@@ -2,7 +2,7 @@
 
 <ul id="myGallery">
   <% for project in @projects -%>
-    <li><%= image_tag 'simplappslogo.png' %>
+    <li><%= image_tag project.screenshot.url %>
       <div class="gv-panel-overlay">
         <h3><%= project.name %></h3>
         <p><%= project.description %></p>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110419035016) do
+ActiveRecord::Schema.define(:version => 20110421210152) do
 
   create_table "pages", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(:version => 20110419035016) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.binary   "image"
+    t.string   "screenshot_file_name"
+    t.string   "screenshot_content_type"
+    t.integer  "screenshot_file_size"
+    t.datetime "screenshot_updated_at"
   end
 
 end
