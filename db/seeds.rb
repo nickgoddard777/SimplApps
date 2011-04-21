@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Page.delete_all
+
+["home", "about", "contact", "services" ].each do |page_type|
+  Page.create(:name=>page_type, :page_type => page_type, :content => "coming soon")
+end
+
