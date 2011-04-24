@@ -63,6 +63,14 @@ h3, h4 {
 	text-shadow: 1px 0 0 #9FBBC6;
 }
 
+h4 {
+	color: #63ABC6;
+	font-size: 16pt;
+	margin: 10px 0 0 10px;
+	padding: 0;
+	text-shadow: 1px 0 0 #9FBBC6;
+}
+
 p {
 	font-size:9pt;
 	line-height:13pt;

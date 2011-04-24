@@ -1,3 +1,8 @@
+require 'rss/1.0'
+require 'rss/2.0'
+require 'open-uri'
+
+
 class PagesController < ApplicationController
   def index
     @pages = Page.all
@@ -65,17 +70,19 @@ class PagesController < ApplicationController
 
   private
     def blog
+
       feed_url = 'http://simplapps.wordpress.com/feed/'
-      output = "<h3>Blog<h3>"
+      output = "<h3>Blog</h3>"
       open(feed_url) do |http|
         response = http.read
         result = RSS::Parser.parse(response, false)
-        output += "Feed Title: #{result.channel.title}<br />"
+
         result.items.each_with_index do |item, i|
-          output += "#{i+1}. #{item.title}<br />" if i &lt; 10
+
+          output += "<h4><a href=\"#{item.link}\">#{item.title}</a></h4><p>#{item.description}</p>" if i < 10
         end
       end
-      return output
+      blog = output
     end
 end
 
