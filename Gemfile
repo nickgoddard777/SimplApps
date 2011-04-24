@@ -5,7 +5,6 @@ gem 'autotest'
 gem 'will_paginate', '3.0.pre2'
 gem 'paperclip', '~> 2.3'
 gem 'heroku'
-gem 'ruby-debug19'
 
 group :development do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -14,7 +13,7 @@ group :development do
 	gem 'nifty-generators'
 	gem 'annotate-models', '1.0.4'
 	gem 'faker', '0.3.1'
-
+    gem 'ruby-debug19'
 end
 
 
