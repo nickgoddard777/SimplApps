@@ -41,8 +41,8 @@ class PagesController < ApplicationController
   def home
     @title = "SimplApps :: Homepage"
   	@page = Page.find_by_page_type('home')
-  	@project = Page.find_by_page_type('project')
-  	@blog = Page.find_by_page_type('blog')
+  	@project = Project.last
+  	@blog = blog
   end
 
   def about
@@ -62,5 +62,20 @@ class PagesController < ApplicationController
   	@page = Page.find_by_page_type('services')
   	render 'display'
   end
+
+  private
+    def blog
+      feed_url = 'http://simplapps.wordpress.com/feed/'
+      output = "<h3>Blog<h3>"
+      open(feed_url) do |http|
+        response = http.read
+        result = RSS::Parser.parse(response, false)
+        output += "Feed Title: #{result.channel.title}<br />"
+        result.items.each_with_index do |item, i|
+          output += "#{i+1}. #{item.title}<br />" if i &lt; 10
+        end
+      end
+      return output
+    end
 end
 

@@ -4,9 +4,9 @@
 $(document).ready(function(){
     $('#myGallery').galleryView({
         panel_width: 800,
-        panel_height: 350,
+        panel_height: 310,
         frame_width: 160,
-        frame_height: 70
+        frame_height: 62
     });
 });
 
