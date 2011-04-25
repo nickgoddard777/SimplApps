@@ -47,6 +47,8 @@ GEM
     celerity (0.8.9)
     childprocess (0.1.8)
       ffi (~> 1.0.6)
+    ckeditor (3.4.2.pre)
+      mime-types (>= 1.16)
     columnize (0.3.2)
     configuration (1.2.0)
     cucumber (0.10.2)
@@ -170,6 +172,7 @@ DEPENDENCIES
   annotate-models (= 1.0.4)
   autotest
   capybara
+  ckeditor (= 3.4.2.pre)
   cucumber-rails
   database_cleaner
   factory_girl_rails (= 1.0)

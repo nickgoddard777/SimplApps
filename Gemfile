@@ -5,6 +5,7 @@ gem 'autotest'
 gem 'will_paginate', '3.0.pre2'
 gem 'paperclip', '~> 2.3'
 gem 'heroku'
+gem 'ckeditor', '3.4.2.pre'
 
 group :development do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
