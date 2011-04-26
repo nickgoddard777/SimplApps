@@ -5,3 +5,7 @@
   <%= raw(@page.content) %>
 </p>
 
+<% content_for :metakeywords do %>
+  <%= @page.keywords %>
+<% end -%>
+
