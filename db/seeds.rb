@@ -9,6 +9,6 @@
 Page.delete_all
 
 ["home", "about", "contact", "services" ].each do |page_type|
-  Page.create(:name=>page_type, :page_type => page_type, :content => "coming soon")
+  Page.create(:name=>page_type, :page_type => page_type, :content => "coming soon",:keywords => "change")
 end
 
