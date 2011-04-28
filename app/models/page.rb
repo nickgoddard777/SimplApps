@@ -1,4 +1,4 @@
 class Page < ActiveRecord::Base
-  attr_accessible :name, :page_type, :content
+  attr_accessible :name, :page_type, :content, :keywords
 end
 
