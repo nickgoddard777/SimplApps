@@ -4,6 +4,9 @@ require 'open-uri'
 
 
 class PagesController < ApplicationController
+
+  before_filter :authenticate_user!, :except => [:home, :about, :contact, :services, :blog]
+
   def index
     @pages = Page.all
   end

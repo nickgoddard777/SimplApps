@@ -1,5 +1,7 @@
 Simplapps::Application.routes.draw do
 
+  devise_for :users
+
   match 'projects/portfolio' => 'projects#portfolio'
   match 'about' 			=> 'pages#about'
 	match 'contact'			=> 'pages#contact'

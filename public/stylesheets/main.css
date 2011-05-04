@@ -239,3 +239,8 @@ footer ul li.last {
 	border: medium none;
 }
 
+footer #user_nav {
+    float:right;
+
+}
+
